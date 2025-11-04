@@ -24,13 +24,7 @@ This repository contains a Windows Forms application called "Biomonitor" used to
 - The Arduino sketch prints one integer per line to the serial port (baud: 9600). The integer is the smoothed EMG reading (moving average).
 - The PC app should read these newline-terminated integers and map/control UI or actuators as required.
 
-## Arduino sketch
-See `h:\Magisterka\kod_do_sterowania\kod_do_sterowania.ino` for the Arduino source. The sketch reads an EMG sensor on analog pin A0, uses a moving average filter, maps values to a servo angle and prints the averaged reading via Serial.
-
 ## Troubleshooting
 - If no data appears, check the COM port and baud rate (9600).
 - Ensure the Arduino is programmed with the included sketch or a compatible one.
 - If the UI is unresponsive, make sure serial reading runs on a background thread or the DataReceived event is handled correctly (avoid blocking the UI thread).
-
-## License
-Add project license information here if applicable.
